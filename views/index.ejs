@@ -41,7 +41,17 @@
                     <% if (typeof succ_msg != 'undefined') { %>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         Your short link : <%= succ_msg %>
-                        <button class="btn" data-clipboard-text="<%= succ_msg %>">Copy to clipboard</button>
+                        <button
+                            type="button"
+                            class="btn"
+                            data-clipboard-text="<%= succ_msg %>"
+                            data-container="body"
+                            data-toggle="popover"
+                            data-placement="right"
+                            data-content="Copied!"
+                        >
+                            Copy to clipboard
+                        </button>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
